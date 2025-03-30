@@ -145,7 +145,7 @@ const Header = () => {
             </button> */}
             <Link 
               to="/book-demo"
-              className="bg-accent text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-accent/90 transition-colors text-center"
+              className="bg-scalex-blue text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-scalex-blue/90  transition-colors text-center"
             >
               Book A Demo
             </Link>
