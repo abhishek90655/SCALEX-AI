@@ -65,7 +65,7 @@ const TrustedLogos = () => {
   );
 
   return (
-    <section className="py-12 relative overflow-hidden bg-gradient-to-b from-background/90 to-scalex-navy/10">
+    <section className="py-6 relative overflow-hidden bg-gradient-to-b from-background/90 to-scalex-navy/10">
       <div className="absolute inset-0 bg-grid-pattern opacity-5 z-0"></div>
       
       <div className="section-container relative z-10">

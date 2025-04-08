@@ -38,7 +38,7 @@ const UseCase = () => {
         
         <div className="text-center mb-8 space-y-3 reveal-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold">
-            We are <span className="text-gradient">enhancing</span> Life Sciences R&D
+            We are <span className="text-scalex-lightBlue">enhancing</span> Life Sciences R&D
           </h2>
           <p className="max-w-3xl mx-auto text-white">
             Redefining how chemistry is done by integrating advanced tools that streamline workflows, harness data insights, and accelerate breakthroughs in research and innovation.

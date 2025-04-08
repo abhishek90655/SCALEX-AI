@@ -1,46 +1,50 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustedLogos from '@/components/TrustedLogos';
 import Benefits from '@/components/Benefits';
-import Products from '@/components/Products';
-import Integrations from '@/components/Integrations';
 import UseCase from '@/components/UseCase';
+import Integrations from '@/components/Integrations';
+import Products from '@/components/Products';
 import FAQs from '@/components/FAQs';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const location = useLocation();
+  const initialized = useRef(false);
+
   useEffect(() => {
-    // Initialize reveal-on-scroll elements
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    const elements = document.querySelectorAll('.reveal-on-scroll');
-    elements.forEach((el) => observer.observe(el));
-    
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+    // Handle scrolling to sections when navigating from other pages
+    if (location.state && location.state.scrollTo && !initialized.current) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+      initialized.current = true;
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-background text-white">
       <Header />
-      <Hero />
+      <div id="home">
+        <Hero />
+      </div>
       <TrustedLogos />
-      <Benefits />
+      <div id="benefits">
+        <Benefits />
+      </div>
       <Products />
-      <Integrations />
+      <div id="integrations">
+        <Integrations />
+      </div>
       {/* <UseCase /> */}
       <FAQs />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

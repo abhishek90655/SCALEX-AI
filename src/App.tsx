@@ -8,6 +8,11 @@ import Index from "./pages/Index";
 // import FreeTrial from "./pages/FreeTrial";
 import BookDemo from "./pages/BookDemo";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+// import AboutUs from "./pages/AboutUs";
+
+
 
 // Create a client for React Query
 const queryClient = new QueryClient();
@@ -23,6 +28,9 @@ const App = () => {
             <Route path="/" element={<Index />} />
             {/* <Route path="/free-trial" element={<FreeTrial />} /> */}
             <Route path="/book-demo" element={<BookDemo />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            {/* <Route path="/about-us" element={<AboutUs />} /> */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

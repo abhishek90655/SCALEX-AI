@@ -66,14 +66,14 @@ const Benefits = () => {
   }, []);
   
   return (
-    <section id="benefits" className="py-20 relative overflow-hidden">
+    <section id="benefits" className="py-4 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background to-scalex-navy/30 z-0"></div>
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 space-y-4 reveal-on-scroll">
           <h2 className="inline-block text-3xl md:text-4xl font-bold">
-          Drive Scale Lower CAC
+          Drive Scale, Lower CAC
           </h2>
           <p className="max-w-3xl mx-auto text-white/70">
           Achieve greater scale while lowering Customer Acquisition Cost (CAC) through optimized <span className="text-scalex-lightBlue">high-performing</span>,<span className="text-scalex-lightBlue"> brand compliant</span> experiences.
